@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/labelNameContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Имя: "
+            app:layout_constraintBottom_toBottomOf="@+id/textNameContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textNameContact" />
+
+        <EditText
+            android:id="@+id/textNameContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelNameContact"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelSurnameContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Фамилия: "
+            app:layout_constraintBottom_toBottomOf="@+id/textSurnameContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textSurnameContact" />
+
+        <EditText
+            android:id="@+id/textSurnameContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelSurnameContact"
+            app:layout_constraintTop_toBottomOf="@+id/textNameContact" />
+
+        <TextView
+            android:id="@+id/labelPhoneContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Номер телефона: "
+            app:layout_constraintBottom_toBottomOf="@+id/textPhoneContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textPhoneContact" />
+
+        <EditText
+            android:id="@+id/textPhoneContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelPhoneContact"
+            app:layout_constraintTop_toBottomOf="@+id/textSurnameContact" />
+
+        <Button
+            android:id="@+id/btnAddContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добавить"
+            app:layout_constraintEnd_toStartOf="@+id/btnCancelContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPhoneContact" />
+
+        <Button
+            android:id="@+id/btnCancelContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Отмена"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnAddContact"
+            app:layout_constraintTop_toBottomOf="@+id/textPhoneContact" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
