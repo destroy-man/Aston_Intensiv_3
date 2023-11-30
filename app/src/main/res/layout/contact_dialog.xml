@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="view"
+            type="ru.korobeynikov.astonintensiv3.ContactDialog" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -69,10 +71,10 @@
             app:layout_constraintTop_toBottomOf="@+id/textSurnameContact" />
 
         <Button
-            android:id="@+id/btnAddContact"
+            android:id="@+id/btnContact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Добавить"
+            android:onClick="@{()->view.clickButton()}"
             app:layout_constraintEnd_toStartOf="@+id/btnCancelContact"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textPhoneContact" />
@@ -82,8 +84,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Отмена"
+            android:onClick="@{()->view.cancel()}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnAddContact"
+            app:layout_constraintStart_toEndOf="@+id/btnContact"
             app:layout_constraintTop_toBottomOf="@+id/textPhoneContact" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
