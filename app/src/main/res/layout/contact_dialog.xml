@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="view"
+            type="ru.korobeynikov.astonintensiv3.contact.ContactDialog" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/labelNameContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_name"
+            app:layout_constraintBottom_toBottomOf="@+id/textNameContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textNameContact" />
+
+        <EditText
+            android:id="@+id/textNameContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelNameContact"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/labelSurnameContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_surname"
+            app:layout_constraintBottom_toBottomOf="@+id/textSurnameContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textSurnameContact" />
+
+        <EditText
+            android:id="@+id/textSurnameContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelSurnameContact"
+            app:layout_constraintTop_toBottomOf="@+id/textNameContact"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/labelPhoneContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_phone"
+            app:layout_constraintBottom_toBottomOf="@+id/textPhoneContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textPhoneContact" />
+
+        <EditText
+            android:id="@+id/textPhoneContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelPhoneContact"
+            app:layout_constraintTop_toBottomOf="@+id/textSurnameContact"
+            tools:ignore="Autofill,LabelFor" />
+
+        <Button
+            android:id="@+id/btnContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->view.clickButton()}"
+            app:layout_constraintEnd_toStartOf="@+id/btnCancelContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPhoneContact" />
+
+        <Button
+            android:id="@+id/btnCancelContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->view.cancel()}"
+            android:text="@string/button_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnContact"
+            app:layout_constraintTop_toBottomOf="@+id/textPhoneContact" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

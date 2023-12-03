@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AstonIntensiv3</string>
+    <string name="textview_name">Имя:</string>
+    <string name="textview_surname">Фамилия:</string>
+    <string name="textview_phone">Номер телефона:</string>
+    <string name="button_cancel">Отмена</string>
+    <string name="button_add">Добавить</string>
+    <string name="button_edit">Изменить</string>
+    <string name="button_delete">Удалить</string>
+    <string name="text_delete">Удалить:</string>
+    <string name="text_delete_contacts">%1$s\n%2$s %3$s</string>
 </resources>
